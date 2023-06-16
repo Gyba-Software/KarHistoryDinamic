@@ -1,13 +1,12 @@
-// Inicio.js
 import React, { useEffect } from 'react';
 import { View, TouchableOpacity, Image, BackHandler, Text  } from 'react-native';
 import { Audio } from 'expo-av';
 
-import inicioEstilos from '../public/css/estilos';
+import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/inicio.mp3');
+const audio = require('../public/audio/introduction.mp3');
 
-const Inicio = ({ navigation }) => {
+const home = ({ navigation }) => {
   useEffect(() => {
     let sound = new Audio.Sound();
 
@@ -38,17 +37,17 @@ const Inicio = ({ navigation }) => {
   const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
 
   const goToEsena1 = () => {
-    navigation.replace('Esena1');
+    navigation.replace('scenes1');
   };
 
   return (
-    <View style={inicioEstilos.container}>
-      <TouchableOpacity style={inicioEstilos.button} onPress={goToEsena1}>
-        <Image source={require('../public/img/logo/logo.jpeg')} style={[inicioEstilos.buttonImage]} />
-        <Text style={inicioEstilos.texto}>Derechos Copyright© Reservados Desarrolladora de Software GYBA</Text>  
+    <View style={homeStyles.container}>
+      <TouchableOpacity style={homeStyles.button} onPress={goToEsena1}>
+        <Image source={require('../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+        <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA</Text>  
       </TouchableOpacity>
     </View>
   );
 };
 
-export default Inicio;
+export default home;

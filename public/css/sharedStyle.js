@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const inicioEstilos = StyleSheet.create({
+const homeStyles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -20,6 +20,30 @@ const inicioEstilos = StyleSheet.create({
         maxHeight: '99%',
     },
 
+    buttonScenes21: {
+        backgroundColor: 'blue',
+        borderRadius: 5,
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        maxWidth: '99%',
+        maxHeight: '49%',
+        position: 'absolute',
+        top: '0.5%'
+    },
+
+    buttonScenes2: {
+        backgroundColor: 'blue',
+        borderRadius: 5,
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        maxWidth: '99%',
+        maxHeight: '49%',
+        position: 'absolute',
+        top: '50.5%'
+    },
+
     buttonImage: {
         position: 'absolute',
         left: '0%',
@@ -32,7 +56,7 @@ const inicioEstilos = StyleSheet.create({
         transform: [{ rotate: '90deg' }],
     },
 
-    texto: {
+    texts: {
         position: 'absolute',
         right: '44%',
         top: '48%',
@@ -48,4 +72,4 @@ const inicioEstilos = StyleSheet.create({
     }
 });
 
-export default inicioEstilos
+export default homeStyles
