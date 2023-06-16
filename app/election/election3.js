@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { View, TouchableOpacity, Image, BackHandler, Text } from 'react-native';
 import { Audio } from 'expo-av';
 
-import homeStyles from '../public/css/sharedStyle';
+import homeStyles from '../../public/css/sharedStyle';
 
-const audio = require('../public/audio/introduction.mp3');
+const audio = require('../../public/audio/introduction.mp3');
 
-const scenes1 = ({ navigation }) => {
+const scenes3 = ({ navigation }) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
   useEffect(() => {
@@ -50,26 +50,26 @@ const scenes1 = ({ navigation }) => {
     return () => backHandler.remove();
   }, []);
 
-  const goToLeftPath1 = () => {
-    navigation.replace('leftPath1');
+  const goToLeftPath3 = () => {
+    navigation.replace('leftPath3');
   };
 
-  const goToRigthPath1 = () => {
-    navigation.replace('rigthPath1');
+  const goToRigthPath3 = () => {
+    navigation.replace('rigthPath3');
   };
 
   return (
     <View style={homeStyles.container}>
-      <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath1}>
-        <Image source={require('../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+      <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath3}>
+        <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
         <Text></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath1}>
-        <Image source={require('../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+      <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath3}>
+        <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
         <Text></Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default scenes1;
+export default scenes3;
