@@ -41,7 +41,7 @@ const scenes1 = ({ navigation }) => {
 
   useEffect(() => {
     const backAction = () => {
-      navigation.replace('home');
+      navigation.replace('introduction');
       return true;
     };
 
@@ -52,11 +52,13 @@ const scenes1 = ({ navigation }) => {
 
   return (
     <View style={homeStyles.container}>
-      <TouchableOpacity style={homeStyles.botonEsena1} disabled={isAudioPlaying}>
+      <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying}>
         <Image source={require('../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+        <Text></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={homeStyles.botonEsena2} disabled={isAudioPlaying}>
+      <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying}>
         <Image source={require('../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+        <Text></Text>
       </TouchableOpacity>
     </View>
   );

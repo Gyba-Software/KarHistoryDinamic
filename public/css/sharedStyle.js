@@ -20,7 +20,7 @@ const homeStyles = StyleSheet.create({
         maxHeight: '99%',
     },
 
-    buttonScenes21: {
+    buttonScenes1: {
         backgroundColor: 'blue',
         borderRadius: 5,
         alignItems: 'center',
