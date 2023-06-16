@@ -45,7 +45,7 @@ const Inicio = ({ navigation }) => {
     <View style={inicioEstilos.container}>
       <TouchableOpacity style={inicioEstilos.button} onPress={goToEsena1}>
         <Image source={require('../public/img/logo/logo.jpeg')} style={[inicioEstilos.buttonImage]} />
-        <Text style={inicioEstilos.texto}>hola</Text>  
+        <Text style={inicioEstilos.texto}>Derechos Copyright© Reservados Desarrolladora de Software GYBA</Text>  
       </TouchableOpacity>
     </View>
   );

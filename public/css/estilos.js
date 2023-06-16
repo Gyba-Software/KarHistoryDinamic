@@ -31,12 +31,19 @@ const inicioEstilos = StyleSheet.create({
         maxHeight: '50%',
         transform: [{ rotate: '90deg' }],
     },
+
     texto: {
         position: 'absolute',
-        left: '0%',
-        top: '25%',
-        backgroundColor: 'blue',
-        fontSize: 30,
+        right: '44%',
+        top: '48%',
+        width: '100%',
+        height: '7%',
+        backgroundColor: 'white',
+        borderWidth: 1, 
+        borderColor: 'black',
+        textAlign: 'center',
+        fontSize: 20,
+        fontStyle: 'italic',
         transform: [{ rotate: '90deg' }],
     }
 });
