@@ -4,10 +4,10 @@
     "slug": "fornd",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./public/img/logo/logo.jpeg",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./public/img/logo/logo.jpeg",
+      "image": "./public/img/logo/pruebaapk.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./public/img/logo/logo.jpeg",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.interactiveBook.myBook"
     },
     "web": {
-      "favicon": "./public/img/logo/logo.jpeg"
+      "favicon": "./public/img/logo/pruebaapk.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f603dcb5-7a47-420a-89fb-3cdc3b1f9ace"
+      }
     }
   }
 }

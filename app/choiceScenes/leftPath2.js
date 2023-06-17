@@ -56,7 +56,7 @@ const leftPath2 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena2} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );

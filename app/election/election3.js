@@ -61,11 +61,11 @@ const scenes3 = ({ navigation }) => {
   return (
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath3}>
-        <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+        <Image source={require('../../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
         <Text></Text>
       </TouchableOpacity>
       <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath3}>
-        <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+        <Image source={require('../../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
         <Text></Text>
       </TouchableOpacity>
     </View>

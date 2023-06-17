@@ -57,7 +57,7 @@ const rigthPath3 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToFynalScenes} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/logo/logo.jpeg')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );
