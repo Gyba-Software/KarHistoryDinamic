@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { View, TouchableOpacity, Image, BackHandler, Text } from 'react-native';
 import { Audio } from 'expo-av';
 
-import homeStyles from '../../public/css/sharedStyle';
+import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../../public/audio/introduction.mp3');
+const audio = require('../public/audio/introduction.mp3');
 
 const fynalScenes = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
@@ -56,7 +56,7 @@ const fynalScenes = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );

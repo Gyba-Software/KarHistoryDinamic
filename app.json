@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "fornd",
-    "slug": "fornd",
+    "name": "Libros_GYBA",
+    "slug": "Libros_GYBA",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "landscape",
+    "icon": "./public/img/logo/pruebakarapk.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./public/img/logo/pruebaapk.png",
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./public/img/logo/pruebakarapk.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.interactiveBook.myBook"

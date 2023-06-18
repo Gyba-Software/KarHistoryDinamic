@@ -21,54 +21,70 @@ const homeStyles = StyleSheet.create({
     },
 
     buttonScenes1: {
-        backgroundColor: 'blue',
         borderRadius: 5,
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        maxWidth: '99%',
-        maxHeight: '49%',
+        maxWidth: '49%',
+        maxHeight: '99%',
         position: 'absolute',
-        top: '0.5%'
+        left: '1%',
     },
 
     buttonScenes2: {
-        backgroundColor: 'blue',
         borderRadius: 5,
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        maxWidth: '99%',
-        maxHeight: '49%',
+        maxWidth: '49%',
+        maxHeight: '99%',
         position: 'absolute',
-        top: '50.5%'
+        left: '50.5%'
     },
 
     buttonImage: {
         position: 'absolute',
-        left: '0%',
-        top: '25%',
+        left: '25%',
+        top: '0%',
         backgroundColor: 'blue',
         width: '100%',
         height: '100%',
-        maxWidth: '100%',
-        maxHeight: '50%',
-        transform: [{ rotate: '90deg' }],
+        maxWidth: '50%',
+        maxHeight: '90%',
+    },
+
+    imageButton: {
+        position: 'absolute',
+        left: '2.5%',
+        top: '2.5%',
+        backgroundColor: 'blue',
+        width: '100%',
+        height: '100%',
+        maxWidth: '95%',
+        maxHeight: '95%',
+    },
+
+    imageIntro: {
+        position: 'absolute',
+        left: '25%',
+        top: '2.5%',
+        backgroundColor: 'blue',
+        width: '100%',
+        height: '100%',
+        maxWidth: '50%',
+        maxHeight: '95%',
     },
 
     texts: {
         position: 'absolute',
-        right: '44%',
-        top: '48%',
+        right: '0%',
+        top: '92%',
         width: '100%',
         height: '7%',
         backgroundColor: 'white',
-        borderWidth: 1, 
-        borderColor: 'black',
         textAlign: 'center',
         fontSize: 20,
         fontStyle: 'italic',
-        transform: [{ rotate: '90deg' }],
     }
 });
 

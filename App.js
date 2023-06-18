@@ -13,6 +13,12 @@ import rigthPath2 from './app/choiceScenes/ringthPath2';
 import scenes3 from './app/election/election3';
 import leftPath3 from './app/choiceScenes/leftPath3';
 import rigthPath3 from './app/choiceScenes/ringthPath3';
+import uniqueScene from './app/uniqueScene/uniqueScene';
+import uniqueScene1 from './app/uniqueScene/uniqueScene1';
+import uniqueScene2 from './app/uniqueScene/uniqueScene2';
+import uniqueScene3 from './app/uniqueScene/uniqueScene3';
+import uniqueScene4 from './app/uniqueScene/uniqueScene4';
+import fynalScenes from './app/finay';
 
 const Stack = createStackNavigator();
 
@@ -20,17 +26,23 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="home">
-        <Stack.Screen name="home" component={home} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="introduction" component={introduction} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="scenes1" component={scenes1} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="leftPath1" component={leftPath1} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="rigthPath1" component={rigthPath1} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="scenes2" component={scenes2} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="leftPath2" component={leftPath2} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="rigthPath2" component={rigthPath2} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="scenes3" component={scenes3} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="leftPath3" component={leftPath3} options={{ title: '', headerShown: false,}} />
-        <Stack.Screen name="rigthPath3" component={rigthPath3} options={{ title: '', headerShown: false,}} />
+        <Stack.Screen name="home" component={home} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="introduction" component={introduction} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="scenes1" component={scenes1} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="leftPath1" component={leftPath1} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="rigthPath1" component={rigthPath1} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="scenes2" component={scenes2} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="leftPath2" component={leftPath2} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="rigthPath2" component={rigthPath2} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="scenes3" component={scenes3} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="leftPath3" component={leftPath3} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="rigthPath3" component={rigthPath3} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene" component={uniqueScene} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene1" component={uniqueScene1} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene2" component={uniqueScene2} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene3" component={uniqueScene3} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene4" component={uniqueScene4} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="fynalScenes" component={fynalScenes} options={{ title: '', headerShown: false, }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

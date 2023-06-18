@@ -6,7 +6,7 @@ import homeStyles from '../../public/css/sharedStyle';
 
 const audio = require('../../public/audio/introduction.mp3');
 
-const rigthPath2 = ({ navigation }) => {
+const uniqueScene1 = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
     useEffect(() => {
@@ -49,17 +49,17 @@ const rigthPath2 = ({ navigation }) => {
         return () => backHandler.remove();
     }, []);
 
-    const goToEsena2 = () => {
-        navigation.replace('scenes3');
+    const goToEsena1 = () => {
+        navigation.replace('scenes2');
     };
 
     return (
         <View style={homeStyles.container}>
-            <TouchableOpacity style={homeStyles.button} onPress={goToEsena2} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/escenas/Imagen14.jpg')} style={[homeStyles.imageIntro]} />
+            <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
+                <Image source={require('../../public/img/escenas/Imagen11.jpg')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>
     );
 };
 
-export default rigthPath2;
+export default uniqueScene1;

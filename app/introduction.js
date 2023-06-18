@@ -57,7 +57,7 @@ const introduction = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../public/img/portada/Portada.jpg')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>
     );
