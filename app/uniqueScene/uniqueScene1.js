@@ -56,7 +56,7 @@ const uniqueScene1 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/escenas/Imagen11.jpg')} style={[homeStyles.imageIntro]} />
+                <Image source={require('../../public/img/escenas/Imagen20.jpg')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>
     );
