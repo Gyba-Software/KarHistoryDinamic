@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../../public/css/sharedStyle';
 
-const audio = require('../../public/audio/introduction.mp3');
+const audio = require('../../public/audio/cuento/cuento7.mp3');
 
 const leftPath3 = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
@@ -40,17 +40,13 @@ const leftPath3 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
-        const backAction = () => {
-            return false;
-        };
-
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
 
         return () => backHandler.remove();
     }, []);
 
     const goToFynalScenes = () => {
-        navigation.replace('fynalScenes');
+        navigation.replace('uniqueScene');
     };
 
     return (

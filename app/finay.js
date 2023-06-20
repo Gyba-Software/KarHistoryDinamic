@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/introduction.mp3');
+const audio = require('../public/audio/cuento/cuento14.mp3');
 
 const fynalScenes = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
@@ -40,11 +40,7 @@ const fynalScenes = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
-        const backAction = () => {
-            return false;
-        };
-
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
 
         return () => backHandler.remove();
     }, []);
@@ -56,7 +52,7 @@ const fynalScenes = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../public/img/escenas/Imagen18.jpg')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );
