@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Libros_GYBA",
-    "slug": "Libros_GYBA",
+    "slug": "libros-gyba",
     "version": "1.0.0",
     "orientation": "landscape",
     "icon": "./public/img/logo/pruebakarapk.png",
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "f603dcb5-7a47-420a-89fb-3cdc3b1f9ace"
+        "projectId": "63be6a6c-4233-4c63-a57f-a2f3b322bac8"
       }
     }
   }
