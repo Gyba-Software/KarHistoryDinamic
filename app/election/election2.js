@@ -50,11 +50,11 @@ const scenes2 = ({ navigation }) => {
   }, []);
 
   const goToLeftPath2 = () => {
-    navigation.replace('leftPath2');
+    navigation.replace('rigthPath2');
   };
 
   const goToRigthPath2 = () => {
-    navigation.replace('rigthPath2');
+    navigation.replace('leftPath2');
   };
 
   return (

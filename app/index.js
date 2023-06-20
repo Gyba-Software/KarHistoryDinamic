@@ -55,7 +55,7 @@ const home = ({ navigation }) => {
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.button} onPress={goToIntroduction} disabled={isAudioPlaying}>
         <Image source={require('../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
-        <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA</Text>  
+        <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA 2023</Text>  
       </TouchableOpacity>
     </View>
   );

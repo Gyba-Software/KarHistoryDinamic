@@ -54,12 +54,12 @@ const scenes1 = ({ navigation }) => {
 
   return (
     <View style={homeStyles.container}>
-      <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath1}>
-        <Image source={require('../public/img/escenas/Imagen4.jpg')} style={[homeStyles.imageButton]} />
+      <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToRigthPath1}>
+        <Image source={require('../public/img/escenas/imagen6.jpg')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
-      <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath1}>
-        <Image source={require('../public/img/escenas/imagen6.jpg')} style={[homeStyles.imageButton]} />
+      <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToLeftPath1}>
+        <Image source={require('../public/img/escenas/Imagen4.jpg')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
     </View>
