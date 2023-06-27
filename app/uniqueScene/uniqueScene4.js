@@ -45,7 +45,7 @@ const uniqueScene4 = ({ navigation }) => {
         return () => backHandler.remove();
     }, []);
     const goToEsena1 = () => {
-        navigation.replace('fynalScenes');
+        navigation.replace('uniqueScene5');
     };
 
     return (

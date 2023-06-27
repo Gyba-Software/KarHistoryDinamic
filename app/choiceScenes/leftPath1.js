@@ -8,6 +8,7 @@ const audio = require('../../public/audio/cuento/paja.mp3');
 
 const leftPath1 = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
+    const [showSecondImage, setShowSecondImage] = useState(false);
 
     useEffect(() => {
         let sound = new Audio.Sound();
@@ -24,9 +25,9 @@ const leftPath1 = ({ navigation }) => {
 
         const onPlaybackStatusUpdate = (status) => {
             if (status.didJustFinish) {
-              setIsAudioPlaying(false);
+                setIsAudioPlaying(false);
             }
-          };
+        };
 
         const backAction = () => {
             return true;
@@ -40,9 +41,16 @@ const leftPath1 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
-
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
         return () => backHandler.remove();
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowSecondImage(true);
+        }, 5000);
+
+        return () => clearTimeout(timer);
     }, []);
 
     const goToEsena1 = () => {
@@ -52,7 +60,8 @@ const leftPath1 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/escenas/Imagen11.jpg')} style={[homeStyles.imageIntro]} />
+                <Image source={require('../public/img/portada/Portada.jpg')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
+                <Image source={require('../public/img/portada/portada2.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
             </TouchableOpacity>
         </View>
     );
