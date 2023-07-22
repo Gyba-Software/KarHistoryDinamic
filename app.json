@@ -4,10 +4,10 @@
     "slug": "libros-gyba",
     "version": "1.0.0",
     "orientation": "landscape",
-    "icon": "./public/img/logo/pruebakarapk.png",
+    "icon": "./public/img/logo/Icono.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./public/img/logo/pruebaapk.png",
+      "image": "./public/img/logo/Icono.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

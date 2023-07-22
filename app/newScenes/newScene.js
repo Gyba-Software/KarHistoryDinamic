@@ -4,16 +4,17 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../../public/css/sharedStyle';
 
-const audio = require('../../public/audio/cuento/cuento9.mp3');
+const audio = require('../../public/audio/cuento/segundaEcena.mp3');
 
 const newScenes = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
     useEffect(() => {
-        let sound = new Audio.Sound();
+        let sound;
 
         const playSound = async () => {
             try {
+                sound = new Audio.Sound();
                 await sound.loadAsync(audio);
                 await sound.playAsync();
                 sound.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
@@ -24,9 +25,9 @@ const newScenes = ({ navigation }) => {
 
         const onPlaybackStatusUpdate = (status) => {
             if (status.didJustFinish) {
-              setIsAudioPlaying(false);
+                setIsAudioPlaying(false);
             }
-          };
+        };
 
         const backAction = () => {
             return true;
@@ -35,12 +36,24 @@ const newScenes = ({ navigation }) => {
         playSound();
 
         return () => {
-            sound.unloadAsync();
+            if (sound) {
+                sound.unloadAsync();
+            }
         };
     }, []);
 
     useEffect(() => {
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
+        if (!isAudioPlaying) {
+            navigation.replace('scenes1');
+        }
+    }, [isAudioPlaying, navigation]);
+
+    const backAction = () => {
+        return true;
+    };
+
+    useEffect(() => {
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
 
         return () => backHandler.remove();
     }, []);
@@ -52,7 +65,7 @@ const newScenes = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../../public/img/escenas/Imagen23.jpg')} style={[homeStyles.imageIntro]} />
+                <Image source={require('../../public/img/cuentos/32.png')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>
     );

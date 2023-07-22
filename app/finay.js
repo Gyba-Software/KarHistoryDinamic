@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/cuento/cuento14.mp3');
+const audio = require('../public/audio/cuento/agradecimientos.mp3');
 
 const fynalScenes = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
@@ -24,9 +24,9 @@ const fynalScenes = ({ navigation }) => {
 
         const onPlaybackStatusUpdate = (status) => {
             if (status.didJustFinish) {
-              setIsAudioPlaying(false);
+                setIsAudioPlaying(false);
             }
-          };
+        };
 
         const backAction = () => {
             return true;
@@ -40,7 +40,7 @@ const fynalScenes = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
 
         return () => backHandler.remove();
     }, []);
@@ -52,7 +52,7 @@ const fynalScenes = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/escenas/Imagen18.jpg')} style={[homeStyles.buttonImage]} />
+                <Image source={require('../public/img/cuentos/final.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );

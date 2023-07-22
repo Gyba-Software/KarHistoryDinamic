@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { View, TouchableOpacity, Image, BackHandler, Text  } from 'react-native';
+import { View, TouchableOpacity, Image, BackHandler, Text } from 'react-native';
 import { Audio } from 'expo-av';
 
 import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/introduction.mp3');
+const audio = require('../public/audio/cuento/Presnetacion.mp3');
 
-const home = ({ navigation }) => {
-
+const Home = ({ navigation }) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
   useEffect(() => {
-    let sound = new Audio.Sound();
+    let sound;
 
     const playSound = async () => {
       try {
+        sound = new Audio.Sound();
         await sound.loadAsync(audio);
         await sound.playAsync();
         sound.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
@@ -29,7 +29,6 @@ const home = ({ navigation }) => {
       }
     };
 
-
     const backAction = () => {
       return true;
     };
@@ -37,15 +36,29 @@ const home = ({ navigation }) => {
     playSound();
 
     return () => {
-      sound.unloadAsync();
+      if (sound) {
+        sound.unloadAsync();
+      }
     };
   }, []);
+
+  useEffect(() => {
+    if (!isAudioPlaying) {
+      navigation.replace('introduction');
+    }
+  }, [isAudioPlaying, navigation]);
 
   const backAction = () => {
     return true;
   };
 
-  const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    return () => {
+      backHandler.remove();
+    };
+  }, []);
 
   const goToIntroduction = () => {
     navigation.replace('introduction');
@@ -55,10 +68,10 @@ const home = ({ navigation }) => {
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.button} onPress={goToIntroduction} disabled={isAudioPlaying}>
         <Image source={require('../public/img/logo/Logo-Gyba.png')} style={[homeStyles.buttonImage]} />
-        <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA 2023</Text>  
+        <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA 2023</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default home;
+export default Home;

@@ -11,10 +11,11 @@ const rigthPath1 = ({ navigation }) => {
     const [showSecondImage, setShowSecondImage] = useState(false);
 
     useEffect(() => {
-        let sound = new Audio.Sound();
+        let sound;
 
         const playSound = async () => {
             try {
+                sound = new Audio.Sound();
                 await sound.loadAsync(audio);
                 await sound.playAsync();
                 sound.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
@@ -36,7 +37,9 @@ const rigthPath1 = ({ navigation }) => {
         playSound();
 
         return () => {
-            sound.unloadAsync();
+            if (sound) {
+                sound.unloadAsync();
+            }
         };
     }, []);
 
@@ -46,9 +49,15 @@ const rigthPath1 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
+        if (!isAudioPlaying) {
+            navigation.replace('scenes2');
+        }
+    }, [isAudioPlaying, navigation]);
+
+    useEffect(() => {
         const timer = setTimeout(() => {
             setShowSecondImage(true);
-        }, 5000);
+        }, 10000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -60,8 +69,8 @@ const rigthPath1 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/portada/Portada.jpg')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
-                <Image source={require('../public/img/portada/portada2.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
+                <Image source={require('../../public/img/cuentos/11.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
+                <Image source={require('../../public/img/cuentos/33.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
             </TouchableOpacity>
         </View>
     );

@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../../public/css/sharedStyle';
 
-const audio = require('../../public/audio/cuento/cuento3.mp3');
+const audio = require('../../public/audio/cuento/maderaBambu.mp3');
 
 const scenes2 = ({ navigation }) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
@@ -60,11 +60,11 @@ const scenes2 = ({ navigation }) => {
   return (
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath2}>
-        <Image source={require('../../public/img/escenas/Imagen1.jpg')} style={[homeStyles.imageButton]} />
+        <Image source={require('../../public/img/cuentos/1.png')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
       <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath2}>
-        <Image source={require('../../public/img/escenas/Imagen7.jpg')} style={[homeStyles.imageButton]} />
+        <Image source={require('../../public/img/cuentos/7.png')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
     </View>

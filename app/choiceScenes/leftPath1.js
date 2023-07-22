@@ -4,17 +4,18 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../../public/css/sharedStyle';
 
-const audio = require('../../public/audio/cuento/paja.mp3');
+const audio = require('../../public/audio/cuento/palmeras.mp3');
 
 const leftPath1 = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
     const [showSecondImage, setShowSecondImage] = useState(false);
 
     useEffect(() => {
-        let sound = new Audio.Sound();
+        let sound;
 
         const playSound = async () => {
             try {
+                sound = new Audio.Sound();
                 await sound.loadAsync(audio);
                 await sound.playAsync();
                 sound.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
@@ -36,7 +37,9 @@ const leftPath1 = ({ navigation }) => {
         playSound();
 
         return () => {
-            sound.unloadAsync();
+            if (sound) {
+                sound.unloadAsync();
+            }
         };
     }, []);
 
@@ -46,9 +49,15 @@ const leftPath1 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
+        if (!isAudioPlaying) {
+            navigation.replace('scenes2');
+        }
+    }, [isAudioPlaying, navigation]);
+
+    useEffect(() => {
         const timer = setTimeout(() => {
             setShowSecondImage(true);
-        }, 5000);
+        }, 10000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -60,8 +69,8 @@ const leftPath1 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/portada/Portada.jpg')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
-                <Image source={require('../public/img/portada/portada2.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
+                <Image source={require('../../public/img/cuentos/34.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
+                <Image source={require('../../public/img/cuentos/35.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
             </TouchableOpacity>
         </View>
     );

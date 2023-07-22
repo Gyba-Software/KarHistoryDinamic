@@ -25,6 +25,7 @@ import uniqueScene7 from './app/uniqueScene/uniqueScene7';
 import uniqueScene8 from './app/uniqueScene/uniqueScene8';
 import uniqueScene9 from './app/uniqueScene/uniqueScene9';
 import uniqueScene10 from './app/uniqueScene/uniqueScene10';
+import uniqueScene11 from './app/uniqueScene/uniqueScene11';
 import fynalScenes from './app/finay';
 
 const Stack = createStackNavigator();
@@ -36,7 +37,7 @@ const App = () => {
         <Stack.Screen name="home" component={home} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="introduction" component={introduction} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="newScenes" component={newScenes} options={{ title: '', headerShown: false, }} />
-        
+
         <Stack.Screen name="scenes1" component={scenes1} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="leftPath1" component={leftPath1} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="rigthPath1" component={rigthPath1} options={{ title: '', headerShown: false, }} />
@@ -60,6 +61,7 @@ const App = () => {
         <Stack.Screen name="uniqueScene8" component={uniqueScene8} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="uniqueScene9" component={uniqueScene9} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="uniqueScene10" component={uniqueScene10} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="uniqueScene11" component={uniqueScene11} options={{ title: '', headerShown: false, }} />
 
         <Stack.Screen name="fynalScenes" component={fynalScenes} options={{ title: '', headerShown: false, }} />
       </Stack.Navigator>
