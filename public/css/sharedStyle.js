@@ -16,8 +16,8 @@ const homeStyles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        maxWidth: '99%',
-        maxHeight: '99%',
+        maxWidth: '100%',
+        maxHeight: '100%',
     },
 
     buttonScenes1: {
@@ -49,7 +49,7 @@ const homeStyles = StyleSheet.create({
         width: '100%',
         height: '100%',
         maxWidth: '50%',
-        maxHeight: '90%',
+        maxHeight: '100%',
     },
 
     imageButton: {
@@ -82,6 +82,15 @@ const homeStyles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
         fontStyle: 'italic',
+    },
+
+    imagenFondo: {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        maxWidth: '100%',
+        maxHeight: '100%',
+        left: '0%',
     }
 });
 

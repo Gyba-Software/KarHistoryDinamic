@@ -44,7 +44,7 @@ const Introduction = ({ navigation }) => {
   }, []);
 
   useEffect(() => {
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
     return () => backHandler.remove();
   }, []);
 
@@ -69,6 +69,7 @@ const Introduction = ({ navigation }) => {
   return (
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
+      <Image source={require('../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
         <Image source={require('../public/img/cuentos/24.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
         <Image source={require('../public/img/cuentos/31.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
       </TouchableOpacity>

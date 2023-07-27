@@ -40,7 +40,7 @@ const uniqueScene11 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
-        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
 
         return () => backHandler.remove();
     }, []);
@@ -51,6 +51,7 @@ const uniqueScene11 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
+                <Image source={require('../../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
                 <Image source={require('../../public/img/cuentos/23.png')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>

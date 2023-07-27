@@ -60,6 +60,7 @@ const rigthPath2 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena2} disabled={isAudioPlaying}>
+            <Image source={require('../../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
                 <Image source={require('../../public/img/cuentos/36.png')} style={[homeStyles.imageIntro]} />
             </TouchableOpacity>
         </View>

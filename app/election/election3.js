@@ -40,10 +40,10 @@ const scenes3 = ({ navigation }) => {
   }, []);
 
   useEffect(() => {
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
 
     return () => backHandler.remove();
-}, []);
+  }, []);
 
   const goToLeftPath3 = () => {
     navigation.replace('leftPath3');
@@ -55,6 +55,7 @@ const scenes3 = ({ navigation }) => {
 
   return (
     <View style={homeStyles.container}>
+      <Image source={require('../../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
       <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath3}>
         <Image source={require('../../public/img/cuentos/3.png')} style={[homeStyles.imageButton]} />
         <Text></Text>

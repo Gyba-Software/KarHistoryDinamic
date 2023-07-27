@@ -69,6 +69,7 @@ const leftPath3 = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
+            <Image source={require('../../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
                 <Image source={require('../../public/img/cuentos/17.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 0 : 1 }]} />
                 <Image source={require('../../public/img/cuentos/40.png')} style={[homeStyles.imageIntro, { opacity: showSecondImage ? 1 : 0 }]} />
             </TouchableOpacity>
