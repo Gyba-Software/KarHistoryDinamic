@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/cuento/primeraEcena.mp3');
+const audio = require('../public/audio/cuento/presentacion.mp3');
 
 const Introduction = ({ navigation }) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
