@@ -49,6 +49,12 @@ const uniqueScene3 = ({ navigation }) => {
         navigation.replace('uniqueScene4');
     };
 
+    useEffect(() => {
+        if (!isAudioPlaying) {
+          navigation.replace('uniqueScene4');
+        }
+      }, [isAudioPlaying, navigation]);
+
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>

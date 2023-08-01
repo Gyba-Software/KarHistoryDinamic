@@ -40,6 +40,12 @@ const uniqueScene10 = ({ navigation }) => {
     }, []);
 
     useEffect(() => {
+        if (!isAudioPlaying) {
+          navigation.replace('uniqueScene11');
+        }
+      }, [isAudioPlaying, navigation]);
+
+    useEffect(() => {
         const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {});
 
         return () => backHandler.remove();

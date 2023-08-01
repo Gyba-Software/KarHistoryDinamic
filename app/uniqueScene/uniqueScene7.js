@@ -47,6 +47,11 @@ const uniqueScene7 = ({ navigation }) => {
     const goToEsena1 = () => {
         navigation.replace('uniqueScene8');
     };
+    useEffect(() => {
+        if (!isAudioPlaying) {
+          navigation.replace('uniqueScene8');
+        }
+      }, [isAudioPlaying, navigation]);
 
     return (
         <View style={homeStyles.container}>

@@ -45,6 +45,12 @@ const uniqueScene1 = ({ navigation }) => {
         return () => backHandler.remove();
     }, []);
 
+    useEffect(() => {
+        if (!isAudioPlaying) {
+          navigation.replace('uniqueScene2');
+        }
+      }, [isAudioPlaying, navigation]);
+
     const goToEsena1 = () => {
         navigation.replace('uniqueScene2');
     };
