@@ -55,7 +55,7 @@ const scenes3 = ({ navigation }) => {
 
   return (
     <View style={homeStyles.container}>
-      <Image source={require('../../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
+      <Image source={require('../../public/img/fondos/fondo4.png')} style={[homeStyles.imagenFondo]}></Image>
       <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath3}>
         <Image source={require('../../public/img/cuentos/3.png')} style={[homeStyles.imageButton]} />
         <Text></Text>

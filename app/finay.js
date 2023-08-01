@@ -52,7 +52,8 @@ const fynalScenes = ({ navigation }) => {
     return (
         <View style={homeStyles.container}>
             <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
-                <Image source={require('../public/img/cuentos/final.png')} style={[homeStyles.buttonImage]} />
+            <Image source={require('../public/img/fondos/Fondo2.png')} style={[homeStyles.imagenFondo]}></Image>
+                <Image source={require('../public/img/fondos/Fondo3.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>
         </View>
     );

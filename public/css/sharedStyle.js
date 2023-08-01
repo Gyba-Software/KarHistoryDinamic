@@ -65,11 +65,11 @@ const homeStyles = StyleSheet.create({
     imageIntro: {
         position: 'absolute',
         left: '25%',
-        top: '2.5%',
+        top: '0%',
         width: '100%',
         height: '100%',
         maxWidth: '50%',
-        maxHeight: '95%',
+        maxHeight: '100%',
     },
 
     texts: {
