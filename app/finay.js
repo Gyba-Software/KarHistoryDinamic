@@ -8,13 +8,13 @@ const audio = require('../public/audio/cuento/agradecimientos.mp3');
 
 const fynalScenes = ({ navigation }) => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(true);
-    const [isButtonEnabled, setIsButtonEnabled] = useState(false);
 
     useEffect(() => {
-        let sound = new Audio.Sound();
+        let sound;
 
         const playSound = async () => {
             try {
+                sound = new Audio.Sound();
                 await sound.loadAsync(audio);
                 await sound.playAsync();
                 sound.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
@@ -35,18 +35,26 @@ const fynalScenes = ({ navigation }) => {
 
         playSound();
 
-        const timeoutId = setTimeout(() => {
-            setIsButtonEnabled(true);
-        }, 6000);
-
         return () => {
-            clearTimeout(timeoutId);
-            sound.unloadAsync();
+            if (sound) {
+                sound.unloadAsync();
+            }
         };
     }, []);
 
     useEffect(() => {
+        if (!isAudioPlaying) {
+            navigation.replace('electionFinal');
+        }
+    }, [isAudioPlaying, navigation]);
+
+    const backAction = () => {
+        return true;
+    };
+
+    useEffect(() => {
         const backHandler = BackHandler.addEventListener('hardwareBackPress', () => { });
+
         return () => backHandler.remove();
     }, []);
 
@@ -56,7 +64,7 @@ const fynalScenes = ({ navigation }) => {
 
     return (
         <View style={homeStyles.container}>
-            <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying || !isButtonEnabled}>
+            <TouchableOpacity style={homeStyles.button} onPress={goToEsena1} disabled={isAudioPlaying}>
                 <Image source={require('../public/img/fondos/Fondo2.png')} style={[homeStyles.imagenFondo]}></Image>
                 <Image source={require('../public/img/fondos/Fondo3.png')} style={[homeStyles.buttonImage]} />
             </TouchableOpacity>

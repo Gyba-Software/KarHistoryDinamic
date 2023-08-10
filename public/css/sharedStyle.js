@@ -79,6 +79,7 @@ const homeStyles = StyleSheet.create({
         width: '100%',
         height: '7%',
         backgroundColor: '#3F8089',
+        color:'white',
         textAlign: 'center',
         fontSize: 20,
         fontStyle: 'italic',

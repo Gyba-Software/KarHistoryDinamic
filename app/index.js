@@ -68,7 +68,7 @@ const Home = ({ navigation }) => {
     <View style={homeStyles.container}>
       <TouchableOpacity style={homeStyles.button} onPress={goToIntroduction} disabled={isAudioPlaying}>
         <Image source={require('../public/img/fondos/Fondo1.png')} style={[homeStyles.imagenFondo]}></Image>
-        <Image source={require('../public/img/fondos/30.png.png')} style={[homeStyles.buttonImage]} />
+        <Image source={require('../public/img/fondos/30.png')} style={[homeStyles.buttonImage]} />
         <Text style={homeStyles.texts}>Derechos Copyright© Reservados Desarrolladora de Software GYBA 2023</Text>
       </TouchableOpacity>
     </View>
