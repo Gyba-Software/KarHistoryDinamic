@@ -47,7 +47,7 @@ const electionFinal = ({ navigation }) => {
   }, []);
 
   const goToLeftPath3 = () => {
-    navigation.replace('introduction');
+    navigation.replace('IntroductionDos');
   };
 
   const goToRigthPath3 = () => {
@@ -58,11 +58,11 @@ const electionFinal = ({ navigation }) => {
     <View style={homeStyles.container}>
       <Image source={require('../../public/img/fondos/fondo4.png')} style={[homeStyles.imagenFondo]}></Image>
       <TouchableOpacity style={homeStyles.buttonScenes1} disabled={isAudioPlaying} onPress={goToLeftPath3}>
-        <Image source={require('../../public/img/cuentos/Pantallafinalregreso.png')} style={[homeStyles.imageButton]} />
+        <Image source={require('../../public/img/cuentos/PantallaFinalRegreso.png')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
       <TouchableOpacity style={homeStyles.buttonScenes2} disabled={isAudioPlaying} onPress={goToRigthPath3}>
-        <Image source={require('../../public/img/cuentos/Pantallafinalsalida.png')} style={[homeStyles.imageButton]} />
+        <Image source={require('../../public/img/cuentos/PantallaFinalSalida.png')} style={[homeStyles.imageButton]} />
         <Text></Text>
       </TouchableOpacity>
     </View>

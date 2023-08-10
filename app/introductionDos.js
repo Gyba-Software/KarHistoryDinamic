@@ -4,9 +4,9 @@ import { Audio } from 'expo-av';
 
 import homeStyles from '../public/css/sharedStyle';
 
-const audio = require('../public/audio/cuento/presentacionUno.mp3');
+const audio = require('../public/audio/cuento/presentacion.mp3');
 
-const Introduction = ({ navigation }) => {
+const IntroductionDos = ({ navigation }) => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(true);
   const [showSecondImage, setShowSecondImage] = useState(false);
 
@@ -77,4 +77,4 @@ const Introduction = ({ navigation }) => {
   );
 };
 
-export default Introduction;
+export default IntroductionDos;

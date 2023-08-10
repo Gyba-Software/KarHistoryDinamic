@@ -28,6 +28,7 @@ import uniqueScene10 from './app/uniqueScene/uniqueScene10';
 import uniqueScene11 from './app/uniqueScene/uniqueScene11';
 import fynalScenes from './app/finay';
 import electionFinal from './app/election/electionFinal';
+import IntroductionDos from './app/introductionDos';
 
 const Stack = createStackNavigator();
 
@@ -66,6 +67,7 @@ const App = () => {
 
         <Stack.Screen name="fynalScenes" component={fynalScenes} options={{ title: '', headerShown: false, }} />
         <Stack.Screen name="electionFinal" component={electionFinal} options={{ title: '', headerShown: false, }} />
+        <Stack.Screen name="IntroductionDos" component={IntroductionDos} options={{ title: '', headerShown: false, }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
